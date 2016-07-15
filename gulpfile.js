@@ -20,4 +20,3 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['watch', 'connect', 'postcss', 'jsfiles', 'htmlReload']);
 
-

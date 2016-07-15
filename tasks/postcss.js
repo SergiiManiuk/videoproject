@@ -17,6 +17,7 @@ module.exports = function() {
         this.emit('end');
     }}))
     .pipe(postcss([
+      require('autoprefixer'),
       require('postcss-simple-vars'),
       require('postcss-nested'),
     ]))
