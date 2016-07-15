@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     postcss = require('gulp-postcss'),
     concat = require('gulp-concat'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    autoprefixer = require('autoprefixer');
 
 module.exports = function() {
   return gulp.src([
@@ -20,6 +21,7 @@ module.exports = function() {
       require('autoprefixer'),
       require('postcss-simple-vars'),
       require('postcss-nested'),
+      autoprefixer({ browsers: ["> 0%"] })
     ]))
     .pipe(concat('all.css'))
     .pipe(gulp.dest('./dist/styles'))
